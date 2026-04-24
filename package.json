@@ -1,0 +1,7 @@
+{
+  "name": "noa-profesor",
+  "private": true,
+  "scripts": {
+    "build": "echo 'build ok'"
+  }
+}
