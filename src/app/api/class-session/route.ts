@@ -7,45 +7,61 @@ function getSql() {
   const databaseUrl = process.env.DATABASE_URL;
 
   if (!databaseUrl) {
-    throw new Error("DATABASE_URL no está configurada.");
+    throw new Error("DATABASE_URL no está configurada en Vercel");
   }
 
   return neon(databaseUrl);
 }
 
 export async function GET(req: Request) {
-  const sql = getSql();
-  const { searchParams } = new URL(req.url);
-  const classId = searchParams.get("class_id") || "ia-1";
+  try {
+    const sql = getSql();
+    const { searchParams } = new URL(req.url);
+    const classId = searchParams.get("class_id") || "ia-1";
 
-  const result = await sql`
-    select class_id, current_block, updated_at
-    from class_sessions
-    where class_id = ${classId}
-    limit 1
-  `;
+    const result = await sql`
+      select class_id, current_block, updated_at
+      from class_sessions
+      where class_id = ${classId}
+      limit 1
+    `;
 
-  if (result.length === 0) {
-    return NextResponse.json({ class_id: classId, current_block: 0 });
+    if (result.length === 0) {
+      return NextResponse.json({ class_id: classId, current_block: 0 });
+    }
+
+    return NextResponse.json(result[0]);
+
+  } catch (err: any) {
+    return NextResponse.json(
+      { error: String(err.message || err) },
+      { status: 500 }
+    );
   }
-
-  return NextResponse.json(result[0]);
 }
 
 export async function POST(req: Request) {
-  const sql = getSql();
-  const body = await req.json();
+  try {
+    const sql = getSql();
+    const body = await req.json();
 
-  const classId = body.class_id || "ia-1";
-  const currentBlock = Number(body.current_block || 0);
+    const classId = body.class_id || "ia-1";
+    const currentBlock = Number(body.current_block || 0);
 
-  const result = await sql`
-    insert into class_sessions (class_id, current_block, updated_at)
-    values (${classId}, ${currentBlock}, now())
-    on conflict (class_id)
-    do update set current_block = excluded.current_block, updated_at = now()
-    returning class_id, current_block, updated_at
-  `;
+    const result = await sql`
+      insert into class_sessions (class_id, current_block, updated_at)
+      values (${classId}, ${currentBlock}, now())
+      on conflict (class_id)
+      do update set current_block = excluded.current_block, updated_at = now()
+      returning class_id, current_block, updated_at
+    `;
 
-  return NextResponse.json(result[0]);
+    return NextResponse.json(result[0]);
+
+  } catch (err: any) {
+    return NextResponse.json(
+      { error: String(err.message || err) },
+      { status: 500 }
+    );
+  }
 }
