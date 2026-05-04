@@ -317,25 +317,38 @@ export default function PresentacionAlumno() {
   
 
   useEffect(() => {
-  let interval = setInterval(async () => {
+  let cancelled = false;
+
+  async function readRemoteBlock() {
     try {
-      const res = await fetch(`/api/class-session?class_id=${id}`);
-      const json = await res.json();
-
-      const next = Number(json.current_block || 0);
-
-      setActive((prev) => {
-        if (prev !== next) {
-          return next;
-        }
-        return prev;
+      const res = await fetch(`/api/class-session?class_id=${id}`, {
+        cache: "no-store",
       });
 
-    } catch (e) {}
-  }, 1000);
+      if (!res.ok) return;
 
-  return () => clearInterval(interval);
-}, [id]);
+      const json = await res.json();
+      const next = Number(json.current_block ?? 0);
+
+      if (Number.isNaN(next)) return;
+
+      const safeNext = Math.max(0, Math.min(data.blocks.length - 1, next));
+
+      if (!cancelled) {
+        setActive((prev) => (prev === safeNext ? prev : safeNext));
+      }
+    } catch {}
+  }
+
+  readRemoteBlock();
+
+  const interval = window.setInterval(readRemoteBlock, 2000);
+
+  return () => {
+    cancelled = true;
+    window.clearInterval(interval);
+  };
+}, [id, data.blocks.length]);
 
 const block = data.blocks[active];
 
