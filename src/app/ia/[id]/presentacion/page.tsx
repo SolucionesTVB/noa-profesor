@@ -345,8 +345,8 @@ const block = data.blocks[active];
 
   
 
-  const next = () => syncSetActive(active + 1);
-  const prev = () => syncSetActive(active - 1);
+  const next = () => setActive((v) => Math.min(data.blocks.length - 1, v + 1));
+  const prev = () => setActive((v) => Math.max(0, v - 1));
 
   return (
     <main style={styles.page}>
