@@ -251,9 +251,143 @@ const blocks = [
   },
 ];
 
+function getTeacherSupport(index: number) {
+  const guides = [
+    {
+      script: "Hoy no vamos a aprender botones. Vamos a aprender a hablarle mejor a la IA para que nos ayude a comunicar mejor.",
+      questions: [
+        "¿Qué mensaje usted borra apenas lo ve?",
+        "¿Qué hace que un mensaje se sienta confiable?",
+        "¿Qué diferencia hay entre escribir bonito y comunicar bien?",
+      ],
+      expected: [
+        "Que mencionen claridad, confianza y cercanía.",
+        "Que entiendan que la IA necesita intención.",
+        "Que no se queden solo en 'me gusta' o 'no me gusta'.",
+      ],
+      rescue: "Si se quedan callados, use un ejemplo cotidiano: un mensaje de banco, un mensaje de médico o un mensaje de WhatsApp que nadie entiende.",
+    },
+    {
+      script: "Vamos a crear una primera versión. No buscamos perfección. Buscamos tener algo para mejorar.",
+      questions: [
+        "¿Este mensaje suena como una persona real?",
+        "¿Se entiende rápido qué ofrece el contador?",
+        "¿Qué parte le da confianza?",
+      ],
+      expected: [
+        "Que vean si el texto es claro.",
+        "Que detecten si suena frío.",
+        "Que empiecen a comparar tono profesional vs tono humano.",
+      ],
+      rescue: "Si alguien no logra avanzar, dígale que copie el texto tal cual. Primero hacemos, luego corregimos.",
+    },
+    {
+      script: "Ahora vamos a mejorar sin empezar de cero. Aquí es donde la IA empieza a trabajar mejor.",
+      questions: [
+        "¿Cuál versión le hablaría mejor a una persona preocupada?",
+        "¿Qué palabra cambió la emoción del mensaje?",
+        "¿La segunda versión se siente más cercana?",
+      ],
+      expected: [
+        "Que identifiquen palabras como tranquilidad, confianza, claridad.",
+        "Que entiendan que mejorar es dirigir.",
+        "Que noten que la emoción cambia el mensaje.",
+      ],
+      rescue: "Si dicen que ambas versiones son iguales, pida que lean solo la primera línea de cada una y comparen sensación.",
+    },
+    {
+      script: "Cambiamos de caso. Si entendimos la lógica, podemos usarla en otro mundo.",
+      questions: [
+        "¿Qué siente una familia cuando busca casa?",
+        "¿Qué palabras transmiten tranquilidad?",
+        "¿Qué frase evitaría porque suena a anuncio barato?",
+      ],
+      expected: [
+        "Que digan confianza, seguridad, acompañamiento.",
+        "Que eviten frases exageradas.",
+        "Que adapten emoción al caso.",
+      ],
+      rescue: "Si copian el estilo del contador, recuérdeles que ahora la emoción no es estrés financiero, es tranquilidad familiar.",
+    },
+    {
+      script: "Premium no es hablar raro. Premium es sonar claro, sobrio y confiable.",
+      questions: [
+        "¿Esto suena elegante o solo largo?",
+        "¿Qué frase suena falsa?",
+        "¿Qué quitaría para que se vea más serio?",
+      ],
+      expected: [
+        "Que detecten exageraciones.",
+        "Que entiendan que menos puede ser mejor.",
+        "Que vean diferencia entre elegante y recargado.",
+      ],
+      rescue: "Si sale muy adornado, pida: quite frases exageradas y hágalo más sobrio.",
+    },
+    {
+      script: "Ahora tomamos conocimiento profesional y lo volvemos fácil de entender.",
+      questions: [
+        "¿Una persona sin conocimiento legal entendería esto?",
+        "¿Qué palabra está difícil?",
+        "¿El mensaje ayuda o solo impresiona?",
+      ],
+      expected: [
+        "Que bajen tecnicismos.",
+        "Que busquen utilidad.",
+        "Que entiendan que explicar simple es una habilidad.",
+      ],
+      rescue: "Si el texto queda muy técnico, use la frase: explíquelo como si se lo dijera a un vecino.",
+    },
+    {
+      script: "Aquí limpiamos el texto. La IA puede sonar muy bonita, pero vacía.",
+      questions: [
+        "¿Qué frase suena robótica?",
+        "¿Qué parte sobra?",
+        "¿Qué se puede decir más simple?",
+      ],
+      expected: [
+        "Que identifiquen frases genéricas.",
+        "Que quiten promesas falsas.",
+        "Que aprendan a no aceptar todo lo que la IA da.",
+      ],
+      rescue: "Si no detectan nada, señale frases comunes: 'la mejor opción', 'calidad garantizada', 'servicio excepcional'.",
+    },
+    {
+      script: "Ahora cada uno lo lleva a su mundo. Aquí se demuestra que aprendimos.",
+      questions: [
+        "¿Qué tema suyo podría explicar mejor con IA?",
+        "¿A quién quiere ayudar con ese mensaje?",
+        "¿Dónde podría usarlo esta semana?",
+      ],
+      expected: [
+        "Que elijan un caso real.",
+        "Que no se queden en ejemplos del profesor.",
+        "Que salgan con algo usable.",
+      ],
+      rescue: "Si alguien no sabe qué usar, dele opciones: trabajo, familia, hobby, consejo, servicio o experiencia personal.",
+    },
+    {
+      script: "No cerramos con teoría. Cerramos con algo guardado y listo para usar.",
+      questions: [
+        "¿Cuál fue su mejor mensaje?",
+        "¿Dónde lo guardó?",
+        "¿Dónde podría usarlo esta semana?",
+      ],
+      expected: [
+        "Que tengan una versión final.",
+        "Que la guarden.",
+        "Que salgan con sensación de logro.",
+      ],
+      rescue: "Si quieren seguir corrigiendo, diga: mejor listo hoy que perfecto nunca.",
+    },
+  ];
+
+  return guides[Math.min(index, guides.length - 1)];
+}
+
 export default function Clase2Page() {
   const [active, setActive] = useState(0);
   const block = blocks[active];
+  const support = getTeacherSupport(active);
 
   return (
     <main style={page}>
@@ -279,6 +413,30 @@ export default function Clase2Page() {
         <div style={teacherCardGold}>
           <strong>Qué hacer en clase</strong>
           <p>{block.teacherAction}</p>
+        </div>
+
+        <div style={teacherCard}>
+          <strong>Guion rápido</strong>
+          <p>{support.script}</p>
+        </div>
+
+        <div style={teacherCard}>
+          <strong>Preguntas para el grupo</strong>
+          {support.questions.map((q) => (
+            <p key={q}>• {q}</p>
+          ))}
+        </div>
+
+        <div style={teacherCard}>
+          <strong>Qué respuestas buscar</strong>
+          {support.expected.map((q) => (
+            <p key={q}>• {q}</p>
+          ))}
+        </div>
+
+        <div style={teacherCardGold}>
+          <strong>Si se traban</strong>
+          <p>{support.rescue}</p>
         </div>
 
         <div style={nav}>
