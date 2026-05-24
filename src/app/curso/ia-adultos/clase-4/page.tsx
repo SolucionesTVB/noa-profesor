@@ -23,14 +23,14 @@ const blocks = [
     time: "15–35 min",
     teacherTitle: "Bloque 1: ordenar el caos",
     teacherText:
-      "Primero usamos IA para separar problemas, prioridades y tareas urgentes.",
+      "En este bloque NO vamos a pedir respuestas rápidas. Vamos a enseñar cómo construir un prompt profesional paso a paso para que la IA piense como consultor operativo.",
     teacherGoal:
-      "Que aprendan a convertir caos operativo en estructura clara.",
+      "Que entiendan cómo contexto, rol y estructura cambian completamente la calidad de la respuesta.",
     teacherAction:
       "Pida comparar cómo distintas IA organizan el mismo problema.",
     studentTitle: "Organizar operación",
     studentText:
-      "Vamos a ordenar el problema antes de intentar resolverlo.",
+      "Vamos a comparar prompts malos contra prompts bien estructurados para entender cómo dirigir mejor una IA.",
     practice: {
       theme: "Orden operativo",
       objective:
@@ -42,7 +42,7 @@ const blocks = [
           instruction:
             "Copie este prompt exactamente igual.",
           prompt:
-            "Actúe como consultor operativo de una corredora de seguros. La empresa tiene demasiados mensajes de clientes preguntando estados de pólizas, pagos pendientes, inspecciones y documentos faltantes. Todo está desordenado entre WhatsApp, correos y notas. Ordéname este problema en: problemas principales, riesgos, tareas urgentes y acciones recomendadas.",
+            "Primero compare estos dos prompts y explique cuál produciría una mejor respuesta y por qué. Prompt A: Ayúdeme con una corredora que tiene muchos mensajes. Prompt B: Usted es un consultor operativo especializado en corredoras de seguros. Analice una corredora mediana con alto volumen de WhatsApp, clientes preguntando por pólizas, pagos pendientes, inspecciones y documentos faltantes. La información está dispersa entre WhatsApp, correos y notas. Necesito un diagnóstico operativo dividido en: problemas principales, causas probables, riesgos para el cliente, riesgos para el negocio y acciones recomendadas para hoy. Explique qué elementos hacen que el Prompt B sea superior.",
           example:
             "Problemas principales: información dispersa y seguimiento inconsistente. Riesgos: clientes molestos y atrasos. Acciones: centralizar seguimiento y priorizar casos urgentes.",
         },
@@ -52,7 +52,7 @@ const blocks = [
           instruction:
             "Ahora vamos a pedir prioridades.",
           prompt:
-            "Con base en ese análisis, cree una lista priorizada de tareas para resolver hoy. Quiero prioridad alta, media y baja, explicando por qué cada tarea está en ese nivel.",
+            "Ahora use el Prompt B como base y genere una lista priorizada para resolver hoy. Use este formato obligatorio: 1) Prioridad alta: tareas que afectan clientes o dinero. 2) Prioridad media: tareas que afectan seguimiento o servicio. 3) Prioridad baja: tareas administrativas. Para cada tarea indique: qué hacer, por qué importa, quién debería hacerlo y qué mensaje corto se podría enviar al cliente.",
           example:
             "Prioridad alta: clientes esperando documentos urgentes. Prioridad media: seguimiento de pagos. Prioridad baja: reorganización de notas internas.",
         },
@@ -84,7 +84,7 @@ const blocks = [
           instruction:
             "Copie exactamente este prompt.",
           prompt:
-            "Le voy a dar una conversación larga entre clientes y asesores de seguros. Quiero que la resuma en: problema principal, pendientes, riesgos y próxima acción recomendada. Use lenguaje claro y operativo.",
+            "Actúe como analista operativo de atención al cliente en una corredora de seguros. Analice esta conversación simulada: Cliente: He escrito varias veces y no entiendo si mi póliza ya está lista. También me dijeron que faltaba un documento, pero no sé cuál. Asesor: Estamos revisando. Cliente: Necesito una respuesta clara porque tengo que presentar esto hoy. Quiero que haga un resumen profesional dividido en: 1) problema principal del cliente, 2) información faltante, 3) riesgo de mala experiencia, 4) urgencia real, 5) próxima acción recomendada. No invente datos que no aparecen.",
           example:
             "Problema principal: cliente no entiende documentos pendientes. Próxima acción: enviar lista clara y confirmar recepción.",
         },
@@ -94,7 +94,7 @@ const blocks = [
           instruction:
             "Ahora convierta el resumen en respuesta.",
           prompt:
-            "Con base en ese resumen, escriba una respuesta corta, profesional y humana para el cliente. Debe transmitir orden, claridad y seguimiento.",
+            "Con base en el análisis anterior, redacte una respuesta de WhatsApp para el cliente. Debe cumplir estas reglas: 1) reconocer la preocupación del cliente, 2) explicar que se está ordenando el caso, 3) indicar qué información falta sin inventarla, 4) prometer seguimiento sin dar tiempos falsos, 5) sonar claro, humano y profesional. Máximo 5 líneas.",
           example:
             "Hola, ya revisamos su caso. En este momento solo necesitamos confirmar los documentos pendientes para continuar el proceso correctamente.",
         },
@@ -126,7 +126,7 @@ const blocks = [
           instruction:
             "Copie este prompt completo.",
           prompt:
-            "Quiero que actúe como asistente operativo de una corredora de seguros. Su función es ayudarme a resumir conversaciones, detectar pendientes, organizar tareas y redactar respuestas claras para clientes. Antes de responder, identifique riesgos y prioridades.",
+            "Vamos a construir un asistente operativo reutilizable. Usted actuará como asistente interno de una corredora de seguros en Costa Rica. Su tarea será revisar mensajes de clientes, detectar pendientes, clasificar urgencia, identificar riesgos de mala experiencia y proponer respuestas claras. Antes de responder, siempre debe entregar este formato: 1) resumen del caso, 2) datos faltantes, 3) prioridad alta/media/baja, 4) riesgo principal, 5) acción recomendada, 6) mensaje sugerido para el cliente. No debe inventar información ni prometer tiempos no confirmados.",
           example:
             "Asistente preparado para ordenar pendientes, riesgos y próximos pasos.",
         },
@@ -136,7 +136,7 @@ const blocks = [
           instruction:
             "Ahora dele un caso real.",
           prompt:
-            "Cliente molesto porque no entiende el estado de su póliza y dice que nadie le responde claro. Ayúdeme a organizar el caso, detectar el problema principal y preparar una respuesta profesional.",
+            "Pruebe el asistente con este caso: Cliente escribe por WhatsApp: 'Buenos días, ya envié lo que me pidieron y sigo sin entender si mi póliza está activa o no. Me preocupa porque necesito estar cubierto esta semana y cada vez me dicen algo diferente.' Aplique el formato obligatorio del asistente: resumen, datos faltantes, prioridad, riesgo, acción recomendada y mensaje sugerido.",
           example:
             "Problema principal: falta de claridad. Acción recomendada: explicar estado actual y próximos pasos.",
         },
@@ -168,7 +168,7 @@ const blocks = [
           instruction:
             "Copie este prompt.",
           prompt:
-            "Revise esta respuesta como supervisor operativo. Dígame qué partes podrían generar problemas, sonar falsas o crear mala experiencia para el cliente. Señale riesgos específicos.",
+            "Actúe como supervisor operativo de una corredora. Revise esta respuesta generada por IA: 'Estimado cliente, no se preocupe, su póliza quedará lista pronto y nuestro equipo garantiza una solución rápida y efectiva.' Evalúe la respuesta con estos criterios: 1) promesas no verificadas, 2) falta de claridad, 3) riesgo legal o comercial, 4) tono poco humano, 5) información faltante. Luego explique cómo mejorarla.",
           example:
             "Riesgo: prometer tiempos que no se han confirmado.",
         },
@@ -178,7 +178,7 @@ const blocks = [
           instruction:
             "Ahora pida una versión segura.",
           prompt:
-            "Ahora reescriba la respuesta de forma más clara, humana y responsable. Quite promesas exageradas y mantenga tono profesional.",
+            "Reescriba la respuesta anterior de forma más responsable. Debe: 1) reconocer la preocupación del cliente, 2) evitar prometer tiempos no confirmados, 3) explicar que se verificará el estado real, 4) pedir o confirmar la información necesaria, 5) cerrar con tono humano y profesional. Máximo 5 líneas.",
           example:
             "Estamos revisando su caso para darle una actualización correcta y clara lo antes posible.",
         },
@@ -210,7 +210,7 @@ const blocks = [
           instruction:
             "Copie exactamente este prompt.",
           prompt:
-            "Actúe como encargado operativo de una corredora de seguros. Tiene clientes esperando respuesta, documentos pendientes, mensajes mezclados y seguimiento atrasado. Cree un plan de acción para hoy usando prioridades, tareas y respuestas rápidas.",
+            "Actúe como encargado operativo de una corredora de seguros durante una mañana de alta carga. Situación: hay 18 mensajes de WhatsApp sin clasificar, 6 clientes preguntan por estado de póliza, 4 casos tienen documentos pendientes, 3 clientes preguntan por pagos y 2 clientes están molestos porque no han recibido respuesta clara. No hay más personal disponible y todo debe organizarse desde el celular. Cree un plan de acción para hoy con este formato: 1) diagnóstico rápido, 2) prioridades de las próximas 2 horas, 3) tareas por tipo de caso, 4) mensajes modelo para clientes, 5) riesgos que deben evitarse, 6) qué dejar documentado para mañana.",
           example:
             "Prioridad 1: clientes con pagos urgentes. Prioridad 2: documentos pendientes. Prioridad 3: reorganizar seguimiento.",
         },
@@ -220,7 +220,7 @@ const blocks = [
           instruction:
             "Ahora prepare el cierre del día.",
           prompt:
-            "Con base en ese plan, prepare un resumen ejecutivo corto para enviar al gerente indicando: problemas encontrados, acciones tomadas y pendientes para mañana.",
+            "Con base en el plan anterior, prepare un resumen ejecutivo para el gerente. Debe incluir: 1) situación encontrada, 2) acciones tomadas hoy, 3) casos críticos, 4) pendientes para mañana, 5) recomendación para evitar que el problema se repita. Use tono ejecutivo, claro y sin exagerar.",
           example:
             "Se organizaron casos urgentes, se respondió a clientes prioritarios y quedaron pendientes documentos específicos para seguimiento.",
         },
