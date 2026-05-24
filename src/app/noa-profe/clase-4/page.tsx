@@ -1,3 +1,3 @@
-import Clase2Page from "@/app/curso/ia-adultos/clase-2/page";
+import Clase4Page from "@/app/curso/ia-adultos/clase-4/page";
 
-export default Clase2Page;
+export default Clase4Page;
