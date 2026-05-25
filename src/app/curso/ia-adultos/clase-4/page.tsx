@@ -84,7 +84,7 @@ const blocks = [
           instruction:
             "Copie exactamente este prompt.",
           prompt:
-            "Actúe como analista operativo de atención al cliente en una corredora de seguros. Analice esta conversación simulada: Cliente: He escrito varias veces y no entiendo si mi póliza ya está lista. También me dijeron que faltaba un documento, pero no sé cuál. Asesor: Estamos revisando. Cliente: Necesito una respuesta clara porque tengo que presentar esto hoy. Quiero que haga un resumen profesional dividido en: 1) problema principal del cliente, 2) información faltante, 3) riesgo de mala experiencia, 4) urgencia real, 5) próxima acción recomendada. No invente datos que no aparecen.",
+            "Actúe como analista operativo de atención al cliente en una corredora de seguros.\n\nAnalice esta conversación:\n\nCliente:\nBuenos días, envié los documentos hace dos días y todavía no entiendo si mi póliza ya quedó activa. Además me dijeron que faltaba algo, pero nadie me explica qué documento es.\n\nAsesor:\nEstamos revisando el caso.\n\nCliente:\nNecesito resolverlo hoy porque tengo una reunión mañana y me preocupa no tener cobertura activa.\n\nAsesor:\nPermítame validar nuevamente.\n\nCon base en esta conversación:\n\n1. Identifique el problema principal\n2. Detecte información faltante\n3. Señale riesgos de mala experiencia\n4. Determine el nivel de urgencia\n5. Recomiende próxima acción operativa\n\nUse lenguaje ejecutivo, claro y operativo.",
           example:
             "Problema principal: cliente no entiende documentos pendientes. Próxima acción: enviar lista clara y confirmar recepción.",
         },
