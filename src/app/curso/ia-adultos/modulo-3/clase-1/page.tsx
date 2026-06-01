@@ -21,44 +21,44 @@ const blocks = [
   },
   {
     time: "15–35 min",
-    teacherTitle: "Bloque 1: crear la caja fuerte NOA",
+    teacherTitle: "Bloque 1: abrir ChatGPT y pegar el Prompt Maestro",
     teacherText:
-      "Antes de producir contenido, debemos resolver dónde se guarda. Si todo queda en ChatGPT, se pierde. La caja fuerte puede ser WhatsApp a sí mismo, Notas o un grupo personal llamado Mi Proyecto NOA.",
+      "Antes de producir contenido, debemos preparar bien la conversación en ChatGPT. No vamos a usar formularios ni sistemas externos. Todo inicia con un Prompt Maestro que guía la clase y termina con un resultado final ordenado.",
     teacherGoal:
-      "Que todos tengan un lugar simple donde guardar avances sin depender del hilo de ChatGPT.",
+      "Que todos trabajen dentro de ChatGPT con una instrucción clara desde el inicio.",
     teacherAction:
-      "Camine el grupo paso a paso: abrir WhatsApp, crear grupo consigo mismo o usar Notas. El nombre debe ser Mi Proyecto NOA.",
-    studentTitle: "Mi Proyecto NOA",
+      "Pida que todos abran ChatGPT y peguen el Prompt Maestro. Explique que ChatGPT irá preguntando paso a paso y al final entregará el resultado del día.",
+    studentTitle: "ChatGPT",
     studentText:
-      "Vamos a crear el lugar donde guardaremos la Ficha Maestra durante todo el módulo.",
+      "Vamos a iniciar la conversación correcta para construir la Ficha Maestra NOA.",
     practice: {
-      theme: "Caja fuerte NOA",
+      theme: "Prompt Maestro NOA",
       objective:
         "Crear un lugar simple para guardar el avance del proyecto personal.",
       practices: [
         {
           label: "Paso A",
-          title: "Crear el espacio",
+          title: "Pegar el Prompt Maestro",
           instruction:
-            "Abra WhatsApp o Notas y cree un espacio llamado Mi Proyecto NOA.",
+            "Abra ChatGPT y pegue el Prompt Maestro de la clase.",
           prompt:
-            "No use ChatGPT todavía. Cree un espacio en WhatsApp o Notas llamado Mi Proyecto NOA. Ahí guardará su Ficha Maestra y los avances del módulo.",
+            "Actúe como mi guía NOA para crear mi Ficha Maestra. Hágame preguntas una por una. No me entregue todo de una vez. Ayúdeme a descubrir algo que sé, he vivido o puedo enseñar. Cuando tenga suficiente información, entrégueme un bloque final llamado RESULTADO FINAL DEL DÍA - FICHA MAESTRA NOA con: nombre de mi guía, para quién sirve, problema que resuelve, por qué yo puedo explicar esto, pasos principales, errores comunes, consejos prácticos y ejemplo de uso.",
           example:
-            "Mi Proyecto NOA",
+            "ChatGPT",
         },
         {
           label: "Paso B",
-          title: "Pegar plantilla base",
+          title: "Entender el resultado final",
           instruction:
-            "Copie esta plantilla en su espacio personal.",
+            "Este es el resultado que ChatGPT deberá entregar al final de la clase.",
           prompt:
-            "MI FICHA MAESTRA NOA\n\nNombre de mi guía:\nPara quién sirve:\nProblema que resuelve:\nPor qué yo puedo explicar esto:\nPasos principales:\nErrores comunes:\nConsejos prácticos:\nEjemplo de uso:\nCómo lo puedo compartir:",
+            "RESULTADO FINAL DEL DÍA - FICHA MAESTRA NOA\n\nNombre de mi guía:\nPara quién sirve:\nProblema que resuelve:\nPor qué yo puedo explicar esto:\nPasos principales:\nErrores comunes:\nConsejos prácticos:\nEjemplo de uso:",
           example:
-            "Esta plantilla se irá llenando durante el módulo.",
+            "Ese bloque final será lo único que el alumno debe guardar al terminar la clase.",
         },
       ],
       reflection:
-        "La IA produce. La Ficha Maestra ordena. WhatsApp o Notas guardan. Sin caja fuerte, el avance se pierde.",
+        "ChatGPT conversa. NOA guía. El resultado final del día se guarda solo al cierre.",
     },
   },
   {
@@ -153,7 +153,7 @@ const blocks = [
     teacherGoal:
       "Que cada alumno salga con su primera Ficha Maestra guardada.",
     teacherAction:
-      "Haga que copien la versión final en Mi Proyecto NOA. Sin guardar no hay producto.",
+      "Haga que copien la versión final en ChatGPT. Sin guardar no hay producto.",
     studentTitle: "Mi primera Ficha Maestra",
     studentText:
       "Vamos a ordenar el tema elegido en una ficha clara.",
@@ -195,7 +195,7 @@ const blocks = [
     teacherGoal:
       "Cerrar con entregable claro y continuidad.",
     teacherAction:
-      "Pida que revisen que la ficha esté guardada en Mi Proyecto NOA.",
+      "Pida que revisen que la ficha esté guardada en ChatGPT.",
     studentTitle: "Cierre",
     studentText:
       "Guarde su Ficha Maestra NOA. La próxima clase la convertiremos en una guía paso a paso.",
@@ -221,7 +221,7 @@ function getTeacherSupport(index: number) {
       rescue: "Si se quedan fríos, use ejemplos cotidianos: trámites, medicamentos, ventas, cocina, organización, cuidado, celular, documentos o actividades familiares.",
     },
     {
-      script: "La IA ayuda, pero primero necesitamos ordenar el pensamiento. Cada bloque debe terminar guardado en Mi Proyecto NOA.",
+      script: "La IA ayuda, pero primero necesitamos ordenar el pensamiento. Cada bloque debe terminar guardado en ChatGPT.",
       questions: [
         "¿Esto se puede guardar?",
         "¿Esto se entiende fuera del chat?",
