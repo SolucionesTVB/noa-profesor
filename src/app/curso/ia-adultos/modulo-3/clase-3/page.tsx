@@ -7,203 +7,249 @@ import AiCoach from "@/components/clase2/AiCoach";
 const blocks = [
   {
     time: "0–15 min",
-    teacherTitle: "Arranque: de guía a material compartible",
+    teacherTitle: "Arranque: hoy no resumimos, hoy convertimos",
     teacherText:
-      "Hoy tomamos la guía estructurada y la convertimos en algo que otra persona pueda recibir, leer y entender desde WhatsApp o celular.",
+      "Abra con claridad: la Clase 2 ya dejó una GUÍA PASO A PASO desarrollada. Hoy no venimos a resumir por resumir ni a volver a explicar los pasos. Hoy vamos a convertir esa guía en una pieza lista para compartir con otra persona.",
     teacherGoal:
-      "Que el grupo entienda que una buena guía debe poder compartirse sin explicación larga.",
+      "Separar la Clase 3 de la Clase 2. La Clase 2 desarrolló contenido; la Clase 3 lo transforma en material compartible.",
     teacherAction:
-      "Pida abrir Mi Proyecto NOA y buscar la guía estructurada de la clase anterior.",
-    studentTitle: "Convertir mi guía en algo que puedo compartir",
+      "Diga: 'Ya tenemos el contenido. Hoy decidimos cómo lo va a recibir otra persona.'",
+    studentTitle: "De guía desarrollada a material compartible",
     studentText:
-      "Hoy vamos a preparar su guía para que otra persona pueda verla y entenderla.",
+      "Hoy vamos a convertir su guía en una pieza que pueda enviar, mostrar o explicar.",
     practice: null,
   },
+
   {
-    time: "15–40 min",
-    teacherTitle: "Bloque 1: versión corta",
+    time: "15–35 min",
+    teacherTitle: "Bloque 1: elegir cómo se va a compartir",
     teacherText:
-      "Primero creamos una versión corta. Esto sirve para WhatsApp, familia, clientes o compañeros.",
+      "El primer paso no es resumir. El primer paso es decidir el formato de salida. Una misma guía puede convertirse en mensaje de WhatsApp, mini guía, imagen, audio o explicación corta.",
     teacherGoal:
-      "Que cada alumno pueda explicar su guía en pocas líneas.",
+      "Que cada alumno entienda que el contenido debe adaptarse al canal y a la persona que lo recibirá.",
     teacherAction:
-      "Explique que si no se puede resumir, todavía no está clara.",
-    studentTitle: "Versión corta",
+      "Explique con ejemplos: no es igual compartir con un familiar, con un cliente, con un compañero o con un grupo.",
+    studentTitle: "Elegir el formato de mi material",
     studentText:
-      "Vamos a resumir su guía sin perder lo importante.",
+      "Vamos a decidir cuál es la mejor forma de compartir su guía.",
     practice: {
-      theme: "Resumen compartible",
+      theme: "Formato de salida",
       objective:
-        "Crear una versión corta para enviar por WhatsApp.",
+        "Elegir cómo se va a presentar el material final.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Resumen en 8 líneas",
+          title: "Elegir formato",
           instruction:
-            "Pegue su guía estructurada.",
+            "Copie este prompt y pegue debajo su resultado de Clase 2.",
           prompt:
-            "Convierta mi guía en una versión corta para compartir por WhatsApp. Máximo 8 líneas. Debe incluir: para quién sirve, qué problema resuelve, los pasos principales y por qué puede ayudar. Use lenguaje humano, sencillo y claro.",
+            "Voy a trabajar con mi RESULTADO FINAL DEL DÍA - GUÍA PASO A PASO. No quiero que la resuma todavía. Quiero que me ayude a decidir cuál es el mejor formato para compartirla. Evalúe estas opciones: 1) mensaje de WhatsApp, 2) mini guía escrita, 3) imagen tipo portada o afiche, 4) audio explicado, 5) presentación corta. Para cada opción diga cuándo conviene usarla y cuál recomienda para mi caso. Aquí está mi guía: [pegue aquí su guía paso a paso].",
           example:
-            "Esta guía ayuda a familias a organizar medicamentos en casa para evitar confusiones con horarios y dosis.",
+            "Recomendación: mini guía escrita + mensaje de WhatsApp, porque permite compartir el contenido sin explicarlo todo en persona.",
         },
         {
           label: "Mini práctica B",
-          title: "Mensaje de envío",
+          title: "Elegir versión principal",
           instruction:
-            "Cree un mensaje para acompañarla.",
+            "Pida que escoja una versión principal.",
           prompt:
-            "Ahora escriba un mensaje corto para enviar esta guía por WhatsApp. Debe sonar cercano, sin vender, explicando que es algo útil que preparé con ayuda de IA.",
+            "Con base en esa evaluación, elija una versión principal de mi material para trabajar hoy. Debe empezar así: 'Mi material principal será...' y explicar por qué esa opción es la más útil para compartir.",
           example:
-            "Hola, preparé esta guía sencilla porque sé que a veces este tema se vuelve confuso. Tal vez le pueda servir.",
+            "Mi material principal será una mini guía escrita para enviar por WhatsApp, porque se puede leer desde el celular y guardar fácilmente.",
         },
       ],
       reflection:
-        "La versión corta es la puerta de entrada. Si interesa, la persona pide más.",
+        "Compartir bien no es hacer más texto. Es elegir la forma correcta para que otra persona lo entienda.",
     },
   },
+
   {
-    time: "40–70 min",
-    teacherTitle: "Bloque 2: versión completa ordenada",
+    time: "35–60 min",
+    teacherTitle: "Bloque 2: crear la pieza principal",
     teacherText:
-      "Ahora ordenamos la versión más completa para que sea legible.",
+      "Ahora sí convertimos la guía desarrollada en una pieza compartible. No es resumen flojo; es una versión adaptada para que otra persona la reciba y la use.",
     teacherGoal:
-      "Que la guía no sea un bloque de texto cansado.",
+      "Que cada alumno tenga una primera versión compartible del material.",
     teacherAction:
-      "Enfatice títulos, secciones, pasos y claridad visual.",
-    studentTitle: "Versión completa",
+      "Insista: debe ser claro, útil y fácil de leer desde celular.",
+    studentTitle: "Crear mi pieza compartible",
     studentText:
-      "Vamos a ordenar su guía para que sea fácil de leer.",
+      "Vamos a crear la versión principal de su material.",
     practice: {
-      theme: "Guía legible",
+      theme: "Pieza principal",
       objective:
-        "Crear una versión completa con buena estructura.",
+        "Transformar la guía desarrollada en material listo para enviar o mostrar.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Ordenar formato",
+          title: "Crear pieza",
           instruction:
-            "Pida formato limpio.",
+            "Copie este prompt.",
           prompt:
-            "Ordene mi guía en formato claro para lectura en celular. Use títulos, subtítulos, listas cortas y secciones. Debe incluir: título, para quién sirve, problema que resuelve, pasos, errores comunes, consejos, ejemplo práctico y cierre.",
+            "Convierta mi GUÍA PASO A PASO desarrollada en mi material principal para compartir. Use el formato elegido. Debe incluir: título claro, breve introducción, contenido principal ordenado, ejemplo breve, recomendación final y cierre humano. Debe ser fácil de leer desde celular y no debe sentirse como tarea escolar.",
           example:
-            "Formato con secciones claras y listas cortas.",
+            "Material con título, introducción breve, pasos ordenados, ejemplo y cierre.",
         },
         {
           label: "Mini práctica B",
-          title: "Quitar relleno",
+          title: "Mejorar lectura",
           instruction:
-            "Pida limpieza.",
+            "Pida una versión más limpia.",
           prompt:
-            "Revise esta guía y quite relleno, frases repetidas o partes confusas. Mantenga lo útil. Quiero una versión más clara, directa y fácil de compartir.",
+            "Revise este material como si usted fuera la persona que lo recibe por celular. Dígame qué parte está pesada, qué parte sobra, qué parte no se entiende y entregue una versión más clara, directa y fácil de leer.",
           example:
-            "Guía limpia, sin paja y más fácil de leer.",
+            "Versión más corta, mejor ordenada y menos pesada.",
         },
       ],
       reflection:
-        "Una guía buena no solo tiene información. Está ordenada para que otra persona pueda usarla.",
+        "El material compartible debe ayudar rápido. Si cuesta leerlo, no sirve.",
     },
   },
+
   {
-    time: "70–90 min",
-    teacherTitle: "Bloque 3: portada y título fuerte",
+    time: "60–80 min",
+    teacherTitle: "Bloque 3: mensaje de entrega",
     teacherText:
-      "No vamos a diseñar como expertos, pero sí vamos a darle identidad al material.",
+      "Una cosa es tener el material y otra saber cómo entregarlo. El mensaje de entrega ayuda a que la otra persona entienda por qué lo recibe.",
     teacherGoal:
-      "Crear una presentación inicial que dé orgullo y claridad.",
+      "Que cada alumno tenga un mensaje corto para acompañar su material.",
     teacherAction:
-      "Puede usar solo texto o pedir una idea de portada para Canva si alguien lo maneja.",
-    studentTitle: "Identidad de mi guía",
+      "Aclare que el mensaje no debe vender ni sonar grandioso. Debe sonar humano y útil.",
+    studentTitle: "Cómo lo voy a enviar",
     studentText:
-      "Vamos a crear un título y una portada sencilla.",
+      "Vamos a crear el mensaje que acompaña su material.",
     practice: {
-      theme: "Identidad visual",
+      theme: "Mensaje de entrega",
       objective:
-        "Crear título, subtítulo y portada textual.",
+        "Crear un texto corto para enviar el material por WhatsApp u otro canal.",
+      practices: [
+        {
+          label: "Mini práctica A",
+          title: "Mensaje cercano",
+          instruction:
+            "Copie este prompt.",
+          prompt:
+            "Escriba un mensaje corto para enviar mi material a otra persona. Debe sonar cercano, humilde y útil. No quiero que suene como venta ni como exposición. Debe explicar que preparé este material con apoyo de IA porque puede ayudar con un tema concreto.",
+          example:
+            "Hola, preparé esta guía sencilla con apoyo de IA. Tal vez le puede servir porque ordena el tema paso a paso y lo deja más fácil de aplicar.",
+        },
+        {
+          label: "Mini práctica B",
+          title: "Tres versiones",
+          instruction:
+            "Pida versiones por tipo de persona.",
+          prompt:
+            "Ahora haga tres versiones del mensaje: 1) para un familiar, 2) para un compañero o amigo, 3) para una persona que no conozco tanto. Mantenga tono humano y natural.",
+          example:
+            "Versión familiar, versión compañero, versión más formal.",
+        },
+      ],
+      reflection:
+        "El mensaje de entrega abre la puerta. Si suena raro, la persona ni lee el material.",
+    },
+  },
+
+  {
+    time: "80–100 min",
+    teacherTitle: "Bloque 4: portada, título e idea visual",
+    teacherText:
+      "Ahora le damos identidad al material. No es diseño profesional, pero sí una presentación básica que genere orgullo y claridad.",
+    teacherGoal:
+      "Que cada alumno tenga título, subtítulo, frase de propósito e idea visual.",
+    teacherAction:
+      "Explique que esto puede usarse luego en Canva, una imagen simple o como portada textual.",
+    studentTitle: "Identidad de mi material",
+    studentText:
+      "Vamos a crear una portada textual e idea visual sencilla.",
+    practice: {
+      theme: "Identidad visual simple",
+      objective:
+        "Crear presentación básica del material.",
       practices: [
         {
           label: "Mini práctica A",
           title: "Título y subtítulo",
           instruction:
-            "Pida opciones.",
+            "Copie este prompt.",
           prompt:
-            "Proponga 10 opciones de título y subtítulo para mi guía. Deben ser claros, humanos, útiles y fáciles de entender. No use títulos exagerados. El subtítulo debe explicar para quién sirve.",
+            "Proponga 10 opciones de título y subtítulo para mi material. Deben ser claros, humanos y fáciles de entender. No use títulos exagerados. El subtítulo debe explicar para quién sirve o qué problema ayuda a resolver.",
           example:
-            "Guía práctica para organizar medicamentos en casa. Subtítulo: una ayuda sencilla para familias que cuidan adultos mayores.",
+            "Título: Guía práctica para ordenar una tarea difícil. Subtítulo: una ayuda sencilla para avanzar paso a paso.",
         },
         {
           label: "Mini práctica B",
-          title: "Portada textual",
+          title: "Portada e idea visual",
           instruction:
-            "Cree una portada simple.",
+            "Copie este prompt.",
           prompt:
-            "Cree una portada textual sencilla para mi guía. Incluya título, subtítulo, autor como 'Creado por mí con apoyo de IA' y una frase corta de propósito.",
+            "Cree una portada textual sencilla para mi material. Incluya título, subtítulo, autor como 'Creado por mí con apoyo de IA', una frase corta de propósito y una idea visual simple para una imagen o portada si luego deseo hacerla en Canva.",
           example:
-            "Cuidar también es ordenar.",
+            "Frase de propósito: una guía sencilla para convertir experiencia en acción.",
         },
       ],
       reflection:
-        "La portada no es lujo. Ayuda a que la persona sienta que creó algo propio.",
+        "La identidad visual no es adorno. Ayuda a que la persona sienta que creó algo propio.",
     },
   },
+
   {
-    time: "90–115 min",
-    teacherTitle: "Bloque 4: cómo explicarla",
+    time: "100–115 min",
+    teacherTitle: "Bloque 5: resultado final del día",
     teacherText:
-      "Ahora preparamos la explicación oral o escrita. La persona debe poder decir qué hizo y para qué sirve.",
+      "Cerramos uniendo todo en un bloque final. Este es el entregable de la Clase 3.",
     teacherGoal:
-      "Que cada alumno pueda presentar su herramienta con seguridad.",
+      "Que cada alumno salga con material compartible completo.",
     teacherAction:
-      "Haga que practiquen en voz baja o con un compañero.",
-    studentTitle: "Cómo presentar mi guía",
+      "Pida copiar únicamente el bloque llamado RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA.",
+    studentTitle: "Mi material compartible",
     studentText:
-      "Vamos a preparar una explicación corta de su herramienta.",
+      "Vamos a unir todo en el resultado final de la Clase 3.",
     practice: {
-      theme: "Presentación corta",
+      theme: "Material Compartible NOA",
       objective:
-        "Crear una explicación simple para presentar la guía.",
+        "Crear el entregable final de la clase.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Explicación de 30 segundos",
+          title: "Unir material",
           instruction:
-            "Pida un guion corto.",
+            "Copie este prompt.",
           prompt:
-            "Escriba una explicación de 30 segundos para presentar mi guía. Debe decir: qué hice, para quién sirve, qué problema resuelve y por qué puede ayudar. Que suene natural, como si se lo contara a un familiar o compañero.",
+            "Una todo lo trabajado hoy y entregue un bloque final llamado RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA. Debe incluir: 1) formato elegido, 2) título, 3) subtítulo, 4) pieza principal lista para compartir, 5) mensaje de entrega por WhatsApp, 6) portada textual, 7) idea visual simple, 8) explicación corta de 30 segundos. Use formato limpio para copiar y guardar. No agregue explicación fuera del bloque final.",
           example:
-            "Preparé una guía sencilla para ayudar a familias a organizar medicamentos en casa y evitar confusiones.",
+            "RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA\nFormato elegido:\nTítulo:\nSubtítulo:\nPieza principal:\nMensaje de entrega:\nPortada textual:\nIdea visual:\nExplicación de 30 segundos:",
         },
         {
           label: "Mini práctica B",
-          title: "Versión más humana",
+          title: "Pulir versión final",
           instruction:
-            "Mejore el tono.",
+            "Pida una revisión final.",
           prompt:
-            "Ahora haga esa explicación más humana, cercana y sencilla. No quiero que suene como exposición escolar. Quiero que suene como algo que hice con orgullo y quiero compartir.",
+            "Revise este resultado final y mejórelo para que sea más claro, más humano y más fácil de compartir desde celular. Quite repeticiones, mantenga lo útil y deje una versión final lista para guardar.",
           example:
-            "Hice esto porque sé que muchas familias se enredan con este tema y una guía simple puede ayudar bastante.",
+            "Versión final lista para llevar a Clase 4.",
         },
       ],
       reflection:
-        "Cuando una persona puede explicar lo que creó, empieza a apropiarse de su aprendizaje.",
+        "Clase 2 desarrolló la guía. Clase 3 la convierte en una pieza que alguien puede recibir.",
     },
   },
+
   {
     time: "115–120 min",
     teacherTitle: "Cierre NOA",
     teacherText:
-      "Hoy ya tienen material compartible. La próxima clase toca probarlo y mejorarlo.",
+      "Cierre con continuidad: ya tienen material compartible. La próxima clase no vamos a crear desde cero; vamos a probar, mejorar y presentar.",
     teacherGoal:
-      "Cerrar con avance guardado.",
+      "Preparar la Clase 4.",
     teacherAction:
-      "Pida guardar versión corta, versión completa y explicación en Mi Proyecto NOA.",
+      "Pida guardar el resultado final de Clase 3.",
     studentTitle: "Cierre",
     studentText:
-      "Guarde su versión corta, versión completa y explicación. La próxima clase la vamos a probar.",
+      "Guarde su RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA. La próxima clase lo vamos a probar, mejorar y presentar.",
     practice: null,
   },
 ];
-
-
 function getTeacherSupport(index: number) {
   const guides = [
     {
@@ -232,7 +278,7 @@ function getTeacherSupport(index: number) {
         "Que no dejen todo perdido en ChatGPT.",
         "Que conviertan conversación en producto.",
       ],
-      rescue: "Si alguien se pierde, vuelva a la Ficha Maestra: tema, persona, problema, pasos.",
+      rescue: "Si alguien se pierde, vuelva al resultado de Clase 2: guía paso a paso, ejemplos, errores, consejos y cierre.",
     },
     {
       script: "Recuerde: no buscamos perfección. Buscamos una herramienta útil y mejorable.",
@@ -262,7 +308,7 @@ export default function Modulo3Clase3Page() {
       <section style={teacher}>
         <div style={kicker}>NOA Profesor · Guía</div>
         <h1 style={title}>Módulo 3 · Clase 3</h1>
-        <h2 style={subtitle}>Material compartible</h2>
+        <h2 style={subtitle}>Material Compartible NOA</h2>
 
         <div style={counter}>
           Bloque {active + 1} de {blocks.length} · {block.time}
