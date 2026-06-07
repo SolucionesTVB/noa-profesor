@@ -7,203 +7,249 @@ import AiCoach from "@/components/clase2/AiCoach";
 const blocks = [
   {
     time: "0–15 min",
-    teacherTitle: "Arranque: de idea a método",
+    teacherTitle: "Arranque: de Ficha Maestra a Guía Paso a Paso",
     teacherText:
-      "Hoy tomamos la Ficha Maestra y la convertimos en un método paso a paso. Una idea ayuda poco si no se puede explicar en orden.",
+      "Abra con claridad: la Clase 1 terminó con una Ficha Maestra NOA. Hoy no vamos a escoger tema, no vamos a resumir la ficha y no vamos a repetir lo anterior. Hoy vamos a convertir esa ficha en una guía paso a paso desarrollada.",
     teacherGoal:
-      "Que el grupo entienda que una guía útil necesita estructura, no solo contenido.",
+      "Marcar la diferencia: Clase 1 creó la base; Clase 2 desarrolla el contenido útil.",
     teacherAction:
-      "Pida que abran Mi Proyecto NOA y busquen la Ficha Maestra guardada.",
-    studentTitle: "Convertir mi experiencia en pasos",
+      "Diga: 'Ya tenemos la semilla. Hoy vamos a convertirla en una guía que otra persona pueda seguir.'",
+    studentTitle: "Convertir mi ficha en guía",
     studentText:
-      "Hoy vamos a transformar su Ficha Maestra en una guía práctica.",
+      "Hoy vamos a usar su Ficha Maestra NOA para construir una guía paso a paso.",
     practice: null,
   },
+
   {
-    time: "15–40 min",
-    teacherTitle: "Bloque 1: revisar la ficha",
+    time: "15–30 min",
+    teacherTitle: "Bloque 1: pegar la Ficha Maestra sin volver a analizarla",
     teacherText:
-      "Antes de construir, revisamos si la ficha es clara. Si el tema está débil, todo lo demás sale flojo.",
+      "Este bloque es solo para traer el insumo. La IA no debe resumir la ficha ni volver a preguntar lo mismo. Debe usarla para construir la guía.",
     teacherGoal:
-      "Detectar si el tema tiene público, problema y utilidad clara.",
+      "Evitar repetir Clase 1 y entrar rápido en producción.",
     teacherAction:
-      "Use tres preguntas: ¿a quién ayuda?, ¿qué problema resuelve?, ¿qué resultado entrega?",
-    studentTitle: "Revisar mi base",
+      "Pida abrir ChatGPT y pegar la Ficha Maestra de la clase anterior usando el prompt maestro de Clase 2.",
+    studentTitle: "Usar mi resultado anterior",
     studentText:
-      "Vamos a revisar si la Ficha Maestra se entiende.",
+      "Vamos a pegar la Ficha Maestra solo como base de trabajo.",
     practice: {
-      theme: "Revisión de base",
+      theme: "Punto de partida",
       objective:
-        "Asegurar que el tema esté claro antes de construir la guía.",
+        "Usar la Ficha Maestra para construir una guía, sin repetir el ejercicio anterior.",
       practices: [
         {
-          label: "Mini práctica A",
-          title: "Auditoría de ficha",
+          label: "Paso A",
+          title: "Prompt maestro de Clase 2",
           instruction:
-            "Pegue su Ficha Maestra en ChatGPT.",
+            "Copie este prompt en ChatGPT y pegue debajo su Ficha Maestra.",
           prompt:
-            "Revise mi Ficha Maestra NOA como facilitador práctico. Dígame si queda claro: 1) para quién sirve, 2) qué problema resuelve, 3) qué resultado promete, 4) si tiene pasos suficientes, 5) qué parte está floja o confusa. Luego proponga mejoras concretas.",
+            "Voy a trabajar con mi Ficha Maestra NOA de la clase anterior. No quiero que la resuma, no quiero cambiar de tema y no quiero repetir la Clase 1. Use esta ficha únicamente como base para crear una GUÍA PASO A PASO desarrollada. Primero confirme en una sola frase que entendió el tema y luego espere mi instrucción para desarrollar los pasos. Aquí está mi Ficha Maestra: [pegue aquí su Ficha Maestra NOA].",
           example:
-            "Mejorar: aclarar más el público objetivo y agregar errores comunes.",
+            "Entendido. Trabajaremos esa Ficha Maestra para convertirla en una guía paso a paso desarrollada.",
         },
         {
-          label: "Mini práctica B",
-          title: "Ficha corregida",
+          label: "Paso B",
+          title: "Regla de avance",
           instruction:
-            "Pida una versión mejorada.",
+            "Aclare a ChatGPT que cada respuesta debe aportar contenido nuevo.",
           prompt:
-            "Con base en esa revisión, mejore mi Ficha Maestra. Manténgala corta, clara y útil. No agregue relleno. Quiero una versión lista para guardar en Mi Proyecto NOA.",
+            "Durante esta clase, cada respuesta debe ayudarme a desarrollar contenido nuevo de la guía. No vuelva a preguntarme para quién sirve, qué problema resuelve o por qué puedo explicarlo, salvo que falte información crítica.",
           example:
-            "Ficha mejorada con público, problema y pasos más claros.",
+            "La IA queda enfocada en desarrollar contenido, no en repetir diagnóstico.",
         },
       ],
       reflection:
-        "Una buena guía nace de una ficha clara. Si la base está desordenada, el resultado también.",
+        "La Ficha Maestra no se vuelve a construir. Se usa para avanzar.",
     },
   },
+
   {
-    time: "40–70 min",
-    teacherTitle: "Bloque 2: construir los pasos",
+    time: "30–55 min",
+    teacherTitle: "Bloque 2: convertir la ficha en pasos completos",
     teacherText:
-      "El corazón de la guía son los pasos. Aquí convertimos experiencia en método.",
+      "Aquí empieza la producción real. La guía necesita pasos claros, pero cada paso debe tener explicación, acción y resultado.",
     teacherGoal:
-      "Que cada alumno cree una secuencia lógica y fácil de seguir.",
+      "Que cada alumno transforme su idea en una secuencia útil.",
     teacherAction:
-      "Explique que los pasos deben ser acciones, no frases bonitas.",
-    studentTitle: "Mis pasos principales",
+      "Repita: 'Un paso bueno dice qué hacer, cómo hacerlo y qué se logra.'",
+    studentTitle: "Pasos desarrollados",
     studentText:
-      "Vamos a ordenar su conocimiento en pasos claros.",
+      "Vamos a crear los pasos principales de su guía.",
     practice: {
-      theme: "Método paso a paso",
+      theme: "Pasos completos",
       objective:
-        "Crear la estructura principal de la guía.",
+        "Crear una secuencia de pasos clara y aplicable.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Crear pasos",
+          title: "Crear pasos desarrollados",
           instruction:
-            "Use su Ficha Maestra como base.",
+            "Copie este prompt.",
           prompt:
-            "Con base en mi Ficha Maestra NOA, convierta mi tema en una guía de 5 a 7 pasos. Cada paso debe tener: nombre corto, explicación sencilla, acción concreta y resultado esperado. No escriba párrafos largos. Quiero que una persona pueda seguirlo desde el celular.",
+            "Con base en mi Ficha Maestra NOA, cree una guía de 5 a 7 pasos. Cada paso debe incluir: 1) nombre del paso, 2) qué debe hacer la persona, 3) cómo hacerlo de forma sencilla, 4) qué debe evitar, 5) qué resultado debería obtener. Escriba para una persona que leerá desde el celular.",
           example:
-            "Paso 1: Reunir información. Acción: anotar horarios, dosis y nombre de cada medicamento.",
+            "Paso 1: Preparar la información. Qué hacer: reunir lo necesario antes de iniciar. Cómo hacerlo: revisar lo disponible y anotar lo pendiente. Qué evitar: empezar sin claridad. Resultado: tener una base ordenada.",
         },
         {
           label: "Mini práctica B",
-          title: "Orden lógico",
+          title: "Revisar orden lógico",
           instruction:
-            "Revise si los pasos tienen sentido.",
+            "Pida que revise la secuencia.",
           prompt:
-            "Revise esos pasos y dígame si están en orden lógico. Señale si falta algún paso, si alguno sobra o si dos pasos deberían unirse. Luego entregue una versión final más ordenada.",
+            "Revise los pasos anteriores y mejore el orden. Dígame si falta un paso, si alguno sobra o si alguno está muy general. Luego entregue una versión más clara y ordenada.",
           example:
-            "Orden sugerido: primero reunir información, luego separar horarios, luego crear tabla, luego revisar semanalmente.",
+            "La IA reordena la guía para que tenga inicio, desarrollo y cierre.",
         },
       ],
       reflection:
-        "Un método bueno hace que otra persona pueda repetir lo que usted sabe.",
+        "Una guía no es una lista suelta. Es una ruta que otra persona puede seguir.",
     },
   },
+
   {
-    time: "70–95 min",
-    teacherTitle: "Bloque 3: errores, advertencias y consejos",
+    time: "55–80 min",
+    teacherTitle: "Bloque 3: agregar ejemplos dentro de la guía",
     teacherText:
-      "La carne real está aquí. Una guía sin errores comunes parece bonita, pero enseña poco.",
+      "Sin ejemplos, la guía queda bonita pero débil. Los ejemplos aterrizan la idea y hacen que otra persona entienda cómo usarla.",
     teacherGoal:
-      "Agregar profundidad práctica a la guía.",
+      "Agregar aplicación práctica a cada guía.",
     teacherAction:
-      "Diga: 'Lo que usted ya aprendió a golpes vale oro para otro.'",
-    studentTitle: "Lo que no se debe hacer",
+      "Diga: 'El ejemplo es donde la persona dice: ahora sí entendí.'",
+    studentTitle: "Ejemplos que aterrizan",
     studentText:
-      "Vamos a agregar errores comunes, advertencias y consejos prácticos.",
+      "Vamos a agregar ejemplos concretos para que la guía sea más clara.",
     practice: {
-      theme: "Profundidad práctica",
+      theme: "Ejemplos prácticos",
       objective:
-        "Agregar experiencia real a la guía.",
+        "Hacer que la guía sea más fácil de entender y aplicar.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Errores comunes",
+          title: "Ejemplo por paso",
           instruction:
-            "Pida errores y advertencias.",
+            "Copie este prompt.",
           prompt:
-            "Con base en mi guía, genere una sección de errores comunes y advertencias. Para cada error incluya: qué pasa, por qué es un problema y cómo evitarlo. Use lenguaje sencillo y práctico.",
+            "A cada paso de mi guía agréguele un ejemplo práctico. El ejemplo debe mostrar una situación realista donde una persona aplica ese paso. No use ejemplos genéricos. Que se entienda fácil desde celular.",
           example:
-            "Error: confiar solo en la memoria. Problema: se olvidan horarios. Cómo evitarlo: usar tabla o recordatorio.",
+            "Ejemplo: una persona revisa primero lo que tiene disponible, anota lo que falta y evita empezar a medias.",
         },
         {
           label: "Mini práctica B",
-          title: "Consejos de experiencia",
+          title: "Ejemplo completo",
           instruction:
-            "Pida consejos útiles.",
+            "Pida un caso completo.",
           prompt:
-            "Ahora agregue una sección de consejos prácticos. Quiero consejos reales, simples y aplicables. No use frases genéricas. Cada consejo debe ayudar a evitar problemas o mejorar el resultado.",
+            "Ahora cree un ejemplo completo de uso de mi guía. Debe mostrar una persona que tiene el problema, aplica los pasos y obtiene un resultado mejor. Manténgalo breve, claro y realista.",
           example:
-            "Consejo: tome una foto de la tabla y compártala con la familia para que todos tengan la misma información.",
+            "Caso breve con inicio, aplicación de pasos y resultado final.",
         },
       ],
       reflection:
-        "La diferencia entre información y experiencia está en los errores, consejos y advertencias.",
+        "Los ejemplos convierten instrucciones en comprensión.",
     },
   },
+
   {
-    time: "95–115 min",
-    teacherTitle: "Bloque 4: ejemplo práctico",
+    time: "80–100 min",
+    teacherTitle: "Bloque 4: errores, advertencias y consejos",
     teacherText:
-      "La guía necesita un ejemplo para que la persona entienda cómo se usa.",
+      "Aquí entra la experiencia real. La Clase 1 mencionó errores y consejos de forma inicial. Hoy los desarrollamos para que sean útiles.",
     teacherGoal:
-      "Que cada alumno agregue un caso práctico sencillo.",
+      "Agregar profundidad práctica sin repetir la ficha.",
     teacherAction:
-      "Pida que el ejemplo sea realista, no perfecto.",
-    studentTitle: "Ejemplo de uso",
+      "Diga: 'Lo que usted ya aprendió puede evitarle dolores de cabeza a otra persona.'",
+    studentTitle: "Lo que debe evitarse",
     studentText:
-      "Vamos a crear un ejemplo práctico para su guía.",
+      "Vamos a desarrollar errores comunes, advertencias y consejos prácticos.",
     practice: {
-      theme: "Caso práctico",
+      theme: "Experiencia práctica",
       objective:
-        "Crear un ejemplo que muestre cómo aplicar la guía.",
+        "Convertir la experiencia del alumno en recomendaciones útiles.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Crear ejemplo",
+          title: "Errores desarrollados",
           instruction:
-            "Pida un ejemplo aplicado.",
+            "Copie este prompt.",
           prompt:
-            "Cree un ejemplo práctico para mi guía. Debe mostrar una situación realista, cómo se aplica la guía paso a paso y qué resultado se obtiene. Use lenguaje fácil de entender.",
+            "Desarrolle una sección de errores comunes para mi guía. Incluya al menos 5 errores. Para cada uno indique: qué suele pasar, por qué afecta el resultado y cómo evitarlo. Use lenguaje práctico.",
           example:
-            "Una familia tiene medicamentos mezclados. Aplican la guía, separan horarios, crean tabla y reducen confusión.",
+            "Error: empezar sin revisar información. Por qué afecta: genera confusión. Cómo evitarlo: preparar una lista antes de iniciar.",
         },
         {
           label: "Mini práctica B",
-          title: "Versión lista para guardar",
+          title: "Consejos y advertencias",
           instruction:
-            "Pida la guía estructurada.",
+            "Copie este prompt.",
           prompt:
-            "Ahora una todo lo trabajado en una versión ordenada de mi guía: título, para quién sirve, problema que resuelve, pasos, errores comunes, consejos y ejemplo práctico. Déjelo listo para copiar en Mi Proyecto NOA.",
+            "Agregue una sección de consejos prácticos y advertencias. Quiero consejos accionables, no frases obvias. Cada consejo debe ayudar a que la persona aplique mejor la guía.",
           example:
-            "Guía estructurada lista para guardar.",
+            "Consejo: guarde una versión corta para revisar antes de aplicar la guía.",
         },
       ],
       reflection:
-        "El ejemplo convierte la guía en algo más fácil de usar y enseñar.",
+        "La experiencia se nota en los errores que ayuda a evitar.",
     },
   },
+
+  {
+    time: "100–115 min",
+    teacherTitle: "Bloque 5: resultado final del día",
+    teacherText:
+      "Ahora unimos todo en un solo bloque. Este es el entregable de la Clase 2.",
+    teacherGoal:
+      "Que cada alumno salga con una guía paso a paso desarrollada.",
+    teacherAction:
+      "Pida copiar únicamente el bloque final llamado RESULTADO FINAL DEL DÍA - GUÍA PASO A PASO.",
+    studentTitle: "Mi guía paso a paso",
+    studentText:
+      "Vamos a crear el resultado final de la Clase 2.",
+    practice: {
+      theme: "Guía paso a paso",
+      objective:
+        "Crear el entregable final de la clase.",
+      practices: [
+        {
+          label: "Mini práctica A",
+          title: "Unir contenido",
+          instruction:
+            "Copie este prompt.",
+          prompt:
+            "Una todo lo trabajado hoy y entregue un bloque final llamado RESULTADO FINAL DEL DÍA - GUÍA PASO A PASO. Debe incluir: título de la guía, introducción breve, pasos desarrollados, ejemplo completo de uso, errores comunes, consejos prácticos, advertencias y cierre. Use formato limpio para copiar y guardar. No agregue explicación fuera del bloque final.",
+          example:
+            "RESULTADO FINAL DEL DÍA - GUÍA PASO A PASO\nTítulo:\nIntroducción:\nPaso 1...\nEjemplo completo:\nErrores comunes:\nConsejos:\nCierre:",
+        },
+        {
+          label: "Mini práctica B",
+          title: "Limpiar versión final",
+          instruction:
+            "Pida una última mejora.",
+          prompt:
+            "Revise este resultado final y mejórelo para que sea más claro, más útil y más fácil de leer desde celular. Quite repeticiones y deje una versión final lista para guardar.",
+          example:
+            "Versión final limpia, ordenada y lista para usar en la Clase 3.",
+        },
+      ],
+      reflection:
+        "Clase 1 creó la Ficha Maestra. Clase 2 la convierte en una guía desarrollada.",
+    },
+  },
+
   {
     time: "115–120 min",
     teacherTitle: "Cierre NOA",
     teacherText:
-      "Cierre recordando que ya no tienen solo una idea. Tienen un método.",
+      "Cierre con continuidad: ya no tienen solo una ficha. Ahora tienen contenido desarrollado.",
     teacherGoal:
-      "Que guarden la guía estructurada para la próxima clase.",
+      "Preparar la Clase 3: convertir la guía en material compartible.",
     teacherAction:
-      "Pida guardar la versión final en Mi Proyecto NOA.",
+      "Pida guardar el resultado final de Clase 2.",
     studentTitle: "Cierre",
     studentText:
-      "Guarde su guía estructurada. La próxima clase la convertiremos en material compartible.",
+      "Guarde su RESULTADO FINAL DEL DÍA - GUÍA PASO A PASO. La próxima clase lo convertiremos en material compartible.",
     practice: null,
   },
 ];
-
-
 function getTeacherSupport(index: number) {
   const guides = [
     {
@@ -218,7 +264,7 @@ function getTeacherSupport(index: number) {
         "Que no se bloqueen buscando un tema perfecto.",
         "Que entiendan que lo simple también puede ser valioso.",
       ],
-      rescue: "Si se quedan fríos, use ejemplos cotidianos: trámites, medicamentos, ventas, cocina, organización, cuidado, celular, documentos o actividades familiares.",
+      rescue: "Si se quedan fríos, use ejemplos cotidianos: trámites, ventas, cocina, organización, cuidado, uso del celular, documentos, actividades familiares, estudios o experiencia laboral.",
     },
     {
       script: "La IA ayuda, pero primero necesitamos ordenar el pensamiento. Cada bloque debe terminar guardado en Mi Proyecto NOA.",
@@ -262,7 +308,7 @@ export default function Modulo3Clase2Page() {
       <section style={teacher}>
         <div style={kicker}>NOA Profesor · Guía</div>
         <h1 style={title}>Módulo 3 · Clase 2</h1>
-        <h2 style={subtitle}>De experiencia a método</h2>
+        <h2 style={subtitle}>De Ficha Maestra a Guía Paso a Paso</h2>
 
         <div style={counter}>
           Bloque {active + 1} de {blocks.length} · {block.time}
