@@ -7,16 +7,16 @@ import AiCoach from "@/components/clase2/AiCoach";
 const blocks = [
   {
     time: "0–15 min",
-    teacherTitle: "Arranque: hoy no resumimos, hoy convertimos",
+    teacherTitle: "Arranque: hoy convertimos la guía en material compartible",
     teacherText:
-      "Abra con claridad: la Clase 2 ya dejó una GUÍA PASO A PASO desarrollada. Hoy no venimos a resumir por resumir ni a volver a explicar los pasos. Hoy vamos a convertir esa guía en una pieza lista para compartir con otra persona.",
+      "Abra con claridad: la Clase 2 dejó una GUÍA PASO A PASO desarrollada. Hoy no vamos a rehacerla. Hoy la vamos a convertir en una pieza lista para compartir y además le vamos a sumar una imagen de apoyo y un video corto en Qwen como capa visual.",
     teacherGoal:
-      "Separar la Clase 3 de la Clase 2. La Clase 2 desarrolló contenido; la Clase 3 lo transforma en material compartible.",
+      "Separar la Clase 3 de la Clase 2 y dejar claro que el contenido ya existe; hoy se presenta mejor.",
     teacherAction:
-      "Diga: 'Ya tenemos el contenido. Hoy decidimos cómo lo va a recibir otra persona.'",
+      "Diga: 'Primero hacemos el material compartible. Después lo reforzamos con una imagen y un video corto.'",
     studentTitle: "De guía desarrollada a material compartible",
     studentText:
-      "Hoy vamos a convertir su guía en una pieza que pueda enviar, mostrar o explicar.",
+      "Hoy vamos a convertir su guía en una pieza lista para compartir, con apoyo visual.",
     practice: null,
   },
 
@@ -24,7 +24,7 @@ const blocks = [
     time: "15–35 min",
     teacherTitle: "Bloque 1: elegir cómo se va a compartir",
     teacherText:
-      "El primer paso no es resumir. El primer paso es decidir el formato de salida. Una misma guía puede convertirse en mensaje de WhatsApp, mini guía, imagen, audio o explicación corta.",
+      "El primer paso no es resumir. El primer paso es decidir el formato de salida. Una misma guía puede convertirse en mensaje de WhatsApp, mini guía, imagen, audio o presentación corta.",
     teacherGoal:
       "Que cada alumno entienda que el contenido debe adaptarse al canal y a la persona que lo recibirá.",
     teacherAction:
@@ -107,7 +107,7 @@ const blocks = [
   },
 
   {
-    time: "60–80 min",
+    time: "60–78 min",
     teacherTitle: "Bloque 3: mensaje de entrega",
     teacherText:
       "Una cosa es tener el material y otra saber cómo entregarlo. El mensaje de entrega ayuda a que la otra persona entienda por qué lo recibe.",
@@ -150,55 +150,98 @@ const blocks = [
   },
 
   {
-    time: "80–100 min",
-    teacherTitle: "Bloque 4: portada, título e idea visual",
+    time: "78–98 min",
+    teacherTitle: "Bloque 4: imagen de apoyo",
     teacherText:
-      "Ahora le damos identidad al material. No es diseño profesional, pero sí una presentación básica que genere orgullo y claridad.",
+      "Ahora agregamos una capa visual. No vamos a hacer arte por hacer arte. Vamos a crear una imagen de apoyo que represente el material y ayude a compartirlo mejor.",
     teacherGoal:
-      "Que cada alumno tenga título, subtítulo, frase de propósito e idea visual.",
+      "Que cada alumno salga con un prompt claro para generar una imagen útil y coherente con su material.",
     teacherAction:
-      "Explique que esto puede usarse luego en Canva, una imagen simple o como portada textual.",
-    studentTitle: "Identidad de mi material",
+      "Explique: primero contenido, después imagen. La imagen acompaña, no reemplaza.",
+    studentTitle: "Crear mi imagen de apoyo",
     studentText:
-      "Vamos a crear una portada textual e idea visual sencilla.",
+      "Vamos a preparar una imagen sencilla que acompañe el material.",
     practice: {
-      theme: "Identidad visual simple",
+      theme: "Imagen de apoyo",
       objective:
-        "Crear presentación básica del material.",
+        "Crear un prompt claro para generar una imagen útil.",
       practices: [
         {
           label: "Mini práctica A",
-          title: "Título y subtítulo",
+          title: "Definir la imagen",
           instruction:
             "Copie este prompt.",
           prompt:
-            "Proponga 10 opciones de título y subtítulo para mi material. Deben ser claros, humanos y fáciles de entender. No use títulos exagerados. El subtítulo debe explicar para quién sirve o qué problema ayuda a resolver.",
+            "Ayúdeme a crear un prompt para generar una imagen que acompañe mi material. La imagen debe ser clara, útil y coherente con el contenido. Quiero que proponga: 1) tipo de imagen, 2) escena principal, 3) estilo visual, 4) texto corto opcional, 5) formato recomendado para compartir por celular. Base el prompt en mi material actual.",
           example:
-            "Título: Guía práctica para ordenar una tarea difícil. Subtítulo: una ayuda sencilla para avanzar paso a paso.",
+            "Imagen tipo portada vertical, escena sencilla relacionada con la guía, estilo limpio y profesional, texto corto opcional.",
         },
         {
           label: "Mini práctica B",
-          title: "Portada e idea visual",
+          title: "Pulir el prompt",
           instruction:
-            "Copie este prompt.",
+            "Pida una versión más lista para usar.",
           prompt:
-            "Cree una portada textual sencilla para mi material. Incluya título, subtítulo, autor como 'Creado por mí con apoyo de IA', una frase corta de propósito y una idea visual simple para una imagen o portada si luego deseo hacerla en Canva.",
+            "Ahora convierta esa idea en un prompt final, limpio y listo para copiar en un generador de imágenes. Debe ser claro, específico y fácil de usar.",
           example:
-            "Frase de propósito: una guía sencilla para convertir experiencia en acción.",
+            "Prompt final listo para copiar y generar la imagen.",
         },
       ],
       reflection:
-        "La identidad visual no es adorno. Ayuda a que la persona sienta que creó algo propio.",
+        "La imagen buena acompaña el mensaje. No lo distrae.",
     },
   },
 
   {
-    time: "100–115 min",
-    teacherTitle: "Bloque 5: resultado final del día",
+    time: "98–112 min",
+    teacherTitle: "Bloque 5: video corto en Qwen",
+    teacherText:
+      "Ahora damos un paso más: un video corto. No vamos a hacer cine. Vamos a diseñar un video simple, breve y útil para presentar la guía.",
+    teacherGoal:
+      "Que cada alumno tenga un prompt claro para crear un video corto en Qwen.",
+    teacherAction:
+      "Aclare: el video debe tener una sola idea, una sola intención y durar pocos segundos.",
+    studentTitle: "Crear mi video corto",
+    studentText:
+      "Vamos a preparar un prompt para un video corto en Qwen.",
+    practice: {
+      theme: "Video corto Qwen",
+      objective:
+        "Crear un prompt claro para video corto.",
+      practices: [
+        {
+          label: "Mini práctica A",
+          title: "Definir el video",
+          instruction:
+            "Copie este prompt.",
+          prompt:
+            "Ayúdeme a crear un prompt para un video corto en Qwen basado en mi material. El video debe durar entre 5 y 8 segundos, en formato vertical 9:16, con una sola idea principal. Defina: 1) escena o secuencia, 2) mensaje central, 3) ambiente visual, 4) texto breve si hace falta, 5) cierre o llamada suave a leer la guía.",
+          example:
+            "Video vertical corto, una escena principal, mensaje breve y visual limpio.",
+        },
+        {
+          label: "Mini práctica B",
+          title: "Prompt final para Qwen",
+          instruction:
+            "Pida una versión lista para usar.",
+          prompt:
+            "Convierta esa idea en un prompt final, limpio y listo para usar en Qwen. Debe ser breve, claro y específico. No lo haga complejo. Quiero un video corto, simple y útil.",
+          example:
+            "Prompt final listo para copiar en Qwen.",
+        },
+      ],
+      reflection:
+        "El video corto no reemplaza la guía. Solo atrae, presenta y abre la puerta.",
+    },
+  },
+
+  {
+    time: "112–118 min",
+    teacherTitle: "Bloque 6: resultado final del día",
     teacherText:
       "Cerramos uniendo todo en un bloque final. Este es el entregable de la Clase 3.",
     teacherGoal:
-      "Que cada alumno salga con material compartible completo.",
+      "Que cada alumno salga con material compartible completo, incluyendo imagen y video.",
     teacherAction:
       "Pida copiar únicamente el bloque llamado RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA.",
     studentTitle: "Mi material compartible",
@@ -215,9 +258,9 @@ const blocks = [
           instruction:
             "Copie este prompt.",
           prompt:
-            "Una todo lo trabajado hoy y entregue un bloque final llamado RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA. Debe incluir: 1) formato elegido, 2) título, 3) subtítulo, 4) pieza principal lista para compartir, 5) mensaje de entrega por WhatsApp, 6) portada textual, 7) idea visual simple, 8) explicación corta de 30 segundos. Use formato limpio para copiar y guardar. No agregue explicación fuera del bloque final.",
+            "Una todo lo trabajado hoy y entregue un bloque final llamado RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA. Debe incluir: 1) formato elegido, 2) título, 3) subtítulo, 4) pieza principal lista para compartir, 5) mensaje de entrega por WhatsApp, 6) portada textual, 7) idea visual simple, 8) prompt de imagen, 9) prompt de video corto para Qwen, 10) explicación corta de 30 segundos. Use formato limpio para copiar y guardar. No agregue explicación fuera del bloque final.",
           example:
-            "RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA\nFormato elegido:\nTítulo:\nSubtítulo:\nPieza principal:\nMensaje de entrega:\nPortada textual:\nIdea visual:\nExplicación de 30 segundos:",
+            "RESULTADO FINAL DEL DÍA - MATERIAL COMPARTIBLE NOA\nFormato elegido:\nTítulo:\nPieza principal:\nMensaje de entrega:\nPrompt de imagen:\nPrompt de video corto para Qwen:\nExplicación de 30 segundos:",
         },
         {
           label: "Mini práctica B",
@@ -231,15 +274,15 @@ const blocks = [
         },
       ],
       reflection:
-        "Clase 2 desarrolló la guía. Clase 3 la convierte en una pieza que alguien puede recibir.",
+        "Clase 2 desarrolló la guía. Clase 3 la convierte en una pieza que alguien puede recibir y además presentar visualmente.",
     },
   },
 
   {
-    time: "115–120 min",
+    time: "118–120 min",
     teacherTitle: "Cierre NOA",
     teacherText:
-      "Cierre con continuidad: ya tienen material compartible. La próxima clase no vamos a crear desde cero; vamos a probar, mejorar y presentar.",
+      "Cierre con continuidad: ya tienen material compartible, imagen y prompt de video corto. La próxima clase no vamos a crear desde cero; vamos a probar, mejorar y presentar.",
     teacherGoal:
       "Preparar la Clase 4.",
     teacherAction:
